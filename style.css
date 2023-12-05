@@ -1,0 +1,237 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color:#EEF4DD;
+    text-decoration:none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #0E1F2A;
+}
+
+.backgroundimage{
+    position: absolute;
+    opacity: 20%;
+    width:100%;
+    height:100%;
+    background-image: url('img/kingcanyon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 1200px;
+    z-index: 1;
+    margin:0 auto;
+    background-image:linear-gradient(#122336,#070e16);
+    padding-bottom: 60px;
+}
+
+.center{
+    display: flex;
+    flex-direction: row;
+    min-height:100%;
+    width:100%;
+}
+
+.dropdownmenu {
+    display: flex;
+    position: fixed;
+    align-self: center;
+    width: 20%;
+    height: 30%;
+}
+
+.dropdownmenu__searchcategories {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    height:100%;
+    margin-left: 20px;
+    transition: opacity 0.7s, height 0.7s;
+}
+
+.dropdownmenu__button {
+    height: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white;
+    transition: opacity 1s;
+}
+
+.dropdownmenu:hover .dropdownmenu__searchcategories,
+.dropdownmenu:focus-visible .dropdownmenu__searchcategories {
+    opacity: 1;
+    height: 100%; /* Adjust the height to your needs */
+    width:100%;
+}
+
+.dropdownmenu:hover .dropdownmenu__button {
+    opacity: 0.2;
+}
+
+.dropdownmenu:not(:hover) .dropdownmenu__button {
+    opacity: 1;
+}
+
+.dropdownmenu__reference{
+    transition: font-size 0.3s;
+}
+
+.dropdownmenu__reference:hover{
+    font-size: 30px;
+}
+
+header{
+    position:sticky;
+    top: 0px;
+    width:100%;
+    height:5%;
+}
+
+.information{
+    background-image: linear-gradient(#0f1e27,#0b151b);
+    z-index:2;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content:space-evenly;
+    align-items:center;
+    font-size:20px;
+}
+
+.information__reference{
+    transition: opacity .7s;
+}
+
+.information__reference:hover {
+    opacity: 30%;
+}
+
+.information__reference:not(:hover) {
+    opacity: 100%;
+}
+
+footer{
+    position:fixed;
+    bottom: 0px;
+    width:100%;
+}
+
+.productgroup{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.productgroup__product{
+    display:flex;
+    background-color: #4f6370;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right:10px;
+    border-radius:20px;
+    width: 220px;
+    height:280px;
+}
+
+.productgroup__game{
+    margin:20px;
+    color:white;
+}
+
+.productgroup__image{
+    width:200px;
+    height:150px;
+    border-radius: 20px;
+    transition: width 0.7s, height 0.7s;
+}
+
+.productgroup__button{
+    width:100px;
+    height:40px;
+    border-style: none;
+    border-radius: 30px;
+    background-color: #8eb0c7;
+    color: white;
+    transition: background-color 0.7s
+}
+
+.productgroup__button:hover{
+    background-color: #475864;
+}
+
+.productgroup__button:not(:hover){
+    background-color: #8eb0c7;
+}
+
+.productgroup:hover .productgroup__image {
+    width: 230px;
+    height: 155px;
+}
+
+.productgroup:not(:hover) .productgroup__image {
+    width: 200px;
+    height: 150px;
+}
